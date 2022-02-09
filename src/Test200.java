@@ -1,32 +1,26 @@
-package comparation;
-
-public class ParametrizedClass {
+public class Test200 {
     public static void main(String[] args) {
         Info<String> info1 = new Info<>("privet");
         System.out.println(info1);
-        Info<Integer> info2 = new Info<>(5);
+        Info<Integer> info2 = new Info<>(1425512);
         System.out.println(info2);
-        Info<Bus> info3 = new Info<>(new Bus());
-        System.out.println(info3);
-        info3.getValue();
-
+        String s = info1.getValue();
+        System.out.println(s);
     }
 }
 
-class Info <T>{
+class Info<T> {
     private T value;
 
-    public Info (T value) {
+    public Info(T value) {
         this.value = value;
     }
 
     public String toString() {
-        return "{[ " + value + " ]}";
+        return "<<>" + value + "<>>";
     }
 
     public T getValue() {
         return value;
     }
 }
-
-class Bus1 {}
